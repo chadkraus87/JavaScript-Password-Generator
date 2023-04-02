@@ -7,7 +7,7 @@ var specialCharacters = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 // Prompt the user for their password criteria and generate a password.
 function generatePassword() {
   var passwordLength = parseInt(
-    prompt("Enter the length of your desired password. Note: Your password must be at least 8 characters long and no more than 128.")
+    prompt("Please choose the length of your password by selecting a number between 8 and 128.")
   );
 
   // Check for a valid password length.
@@ -28,5 +28,42 @@ function generatePassword() {
     return;
   }
 
-// Add event listener to generate button
+  // Create a character pool based on the selected criteria.
+  var charPool = "";
+  if (includeLowercase) {
+    charPool += lowercaseCharacters;
+  }
+  if (includeUppercase) {
+    charPool += uppercaseCharacters;
+  }
+  if (includeNumeric) {
+    charPool += numericCharacters;
+  }
+  if (includeSpecial) {
+    charPool += specialCharacters;
+  }
+
+  // Generate a password using the pool of characters.
+  var password = "";
+  for (var i = 0; i < passwordLength; i++) {
+    password += charPool.charAt(Math.floor(Math.random() * charPool.length));
+  }
+
+  return password;
+}
+
+// Get references to the #generate element.
+var generateBtn = document.querySelector("#generate");
+
+// Write the generated password to the #password input.
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  if (password) {
+    passwordText.value = password;
+  }
+}
+
+// Add event listener to generate button.
 generateBtn.addEventListener("click", writePassword);
