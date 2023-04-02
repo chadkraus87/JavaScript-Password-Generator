@@ -12,7 +12,7 @@ No installation is necessary for this application.
 
 ## Usage
 
-This webpage is an example of a Password Generator with prompts created using JavaScript.
+This webpage is an example of a Password Generator that allows users to create a random password using lowercase letters, uppercase letters, numeric characters, and special characters. The Password Generator functions by way of leading prompts to help to user create a random, secure password between 8 and 128 characters long. The webpage functionality was created using JavaScript.
 
 ## Credits
 
