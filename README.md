@@ -32,6 +32,8 @@ This webpage is an example of a Password Generator that allows users to create a
 
 [JavaScript this Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
+[Password Special Characters](https://owasp.org/www-community/password-special-characters)
+
 
 ## License
 
