@@ -2,9 +2,11 @@
 
 ## Description
 
-A password generator created using JavaScript.
+This webpage displays a password generator created using JavaScript. The JavaScript used within this deployed application displays the use of var, function, if statements, and calls pools of characters to create a random password for the user using a series of leading questions.
 
 [Deployed App](https://chadkraus87.github.io/JavaScript-Password-Generator/)
+
+![Front End Landing Page](/password-generator.png)
 
 ## Installation
 
